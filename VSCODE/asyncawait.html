@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number"id="one"><br>
+    <input type="number"id="two"><br>
+    <select id="sel">
+        <option value="1">Addition</option>
+        <option value="2">Subtraction</option>
+        <option value="3">Multiplication</option>
+        <option value="4">Division</option>
+    </select><br>
+    <button onclick="func()" >Calculate</button><br>
+    <button onclick="display()">Display</button><br>
+    <div id="res"></div>
+    <script>
+        let p;
+        function func()
+        {
+        let a = parseInt(document.getElementById("one").value)
+        let b = parseInt(document.getElementById("two").value)
+        let c = parseInt(document.getElementById("sel").value)
+
+        switch(c)
+        {
+            case 1:p=new Promise(function(resolve,reject)
+            {
+                setTimeout(function(){
+                    resolve(a+b)
+                },2000)
+            })
+            break;
+            case 2:p=new Promise(function(resolve,reject)
+            {
+                setTimeout(function(){
+                    resolve(a-b)
+                },2000)
+            })
+            break;
+            case 3:p=new Promise(function(resolve,reject)
+            {
+                setTimeout(function(){
+                    resolve(a*b)
+                },2000)
+            })
+            break;
+            case 4:p=new Promise(function(resolve,reject)
+            {
+                setTimeout(function(){
+                    resolve(a/b)
+                },2000)
+            })
+            break;
+        }
+    }
+        async function display()
+        {
+            let ans = await p
+            document.getElementById("res").innerHTML=ans
+        }
+    </script>
+</body>
+</html>

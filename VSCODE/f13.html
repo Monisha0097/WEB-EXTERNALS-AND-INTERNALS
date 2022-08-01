@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const revstr = (str) => {
+            let reversedStr = '';
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                reversedStr += str[i];
+            }
+            return reversedStr
+        }
+        let a = "hiiiii"
+        let c = revstr(a)
+        if(a==c)
+        document.write("true")
+        else
+        document.write("false")
+    </script>
+</body>
+
+</html>

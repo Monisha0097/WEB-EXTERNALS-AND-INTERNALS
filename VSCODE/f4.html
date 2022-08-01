@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id = "one"><br>
+    <input type="number" id="two"><br>
+    <input type="text" id = "op"><br>
+    <button onclick="operation()">Answer</button>
+    <div id="res"></div>
+    
+    <script>
+        function operation()
+        {
+            let a = parseInt(document.getElementById("one").value)
+            let b = parseInt(document.getElementById("two").value)
+            let op= document.getElementById("op").value
+            let c = document.getElementById("res")
+            switch(op)
+            {
+                case '+':
+                    c.innerHTML=(a+b)
+                    break;
+                case '-':
+                    c.innerHTML=a-b
+                    break;
+                case '*':
+                    c.innerHTML=(a*b)
+                    break;
+                case '/':
+                    c.innerHTML=(a/b)
+                    break;
+            }
+
+        }
+    </script>
+</body>
+</html>

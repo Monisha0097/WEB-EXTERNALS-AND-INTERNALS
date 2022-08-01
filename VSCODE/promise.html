@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = prompt("Enter a number")
+        let chec = new Promise(function(resolve,reject)
+        {
+            if(num>20)
+            {
+                resolve("The number is greater than 20")
+            }
+            else{
+                reject("The number is less than 20")
+            }
+        });
+        chec.then(function numTest(result)
+        {
+            alert(result)
+        })
+        chec.catch(function numTest(result)
+        {
+            alert(result)
+        })
+    </script>
+</body>
+</html>

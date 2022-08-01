@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter the location")
+        let paris = new Promise(function(resolve,reject)
+        {
+            if(a=="paris")
+            {
+                resolve("yessss")
+            }
+            else{
+                reject("noooo")
+            }
+        });
+        paris.then(function ans(res)
+        {
+            alert(res)
+        })
+        paris.catch(function ans(res)
+        {
+            alert(res)
+        })
+    </script>
+</body>
+</html>

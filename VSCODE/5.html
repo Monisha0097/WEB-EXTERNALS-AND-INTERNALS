@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Have you booked the flight")
+        let flight = new Promise(function(resolve,reject)
+        {
+            if(a=="yes")
+            {
+                resolve("Flight booked proceed to hotel")
+            }
+            else{
+                reject("First book flight")
+            }
+        })
+        flight.then(function sucval(res)
+        {
+            let b = prompt("Have you booked the hotel")
+            let hotel = new Promise(function(resolve,reject)
+            {
+                if(b=="yes")
+                {
+                    resolve("hotel and flight booked")
+                }
+                else{
+                    reject("could not book hotel")
+                }
+        })
+        hotel.then(function sucval(res)
+        {
+            alert(res)
+        })
+        hotel.catch(function sucval(res)
+        {
+            alert(res)
+        })
+    })
+        flight.catch(function errorval(res)
+        {
+            alert(res)
+        })
+    </script>
+</body>
+</html>

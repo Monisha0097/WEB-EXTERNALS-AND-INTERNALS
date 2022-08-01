@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[]
+        let set = new Set()
+        let ul=['john','jin','rose']
+        for(let i=0;i<ul.length;i++)
+        {
+            arr.push(ul[i])
+            set.add(ul[i])
+        }
+        console.log(arr)
+        console.log(set)
+        console.time("Array")
+        let res1=arr.indexOf("john")!==-1
+        console.log(res1)
+        
+        console.timeEnd("Array")
+        console.time("Set")
+        let res2=set.has("john")
+        console.log(res2)
+        console.timeEnd("Set")
+    </script>
+</body>
+</html>

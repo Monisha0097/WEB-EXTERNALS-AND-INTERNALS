@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num"><br>
+    <button onclick="func()">Answer</button><br>
+    <div id="res"></div>
+    <script>
+        function func()
+        {
+        let a = parseInt(document.getElementById("num").value)
+        let i=1;
+        let final='',cur='';
+        for(i=1;i<=a;i++)
+        {
+           cur = cur+i;
+           final = final+ '<div>'+ cur +'</div>'
+        }
+        let c = document.getElementById('res')
+        c.innerHTML=final
+    }
+    </script>
+</body>
+</html>

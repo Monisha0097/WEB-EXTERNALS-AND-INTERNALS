@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const test=(n1,n2)=>{
+            return new Promise((resolve,reject)=>{
+                    resolve("Adding two numbers: "+(n1+n2)+"<br>")
+            })
+        }
+        const test1=(n1,n2)=>{
+            return new Promise((resolve,reject)=>
+            {
+                    resolve("Subtracting two numbers :"+(n1-n2)+"<br>")
+            })
+        }
+        const test2=(n1,n2)=>{
+            return new Promise((resolve,reject)=>{
+                    resolve("Multiplying : "+(n1*n2))
+            })
+        }
+        let n1 = parseInt(prompt("Enter first number"))
+        let n2 = parseInt(prompt("Enter second number"))
+        test(n1,n2).then(function(res){
+            document.write(res)
+        })
+        test1(n1,n2).then(function(res){
+            document.write(res)
+        })
+        test2(n1,n2).then(function(res){
+            document.write(res)
+        })
+    </script>
+</body>
+</html>

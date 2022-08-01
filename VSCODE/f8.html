@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inp"><br>
+    <select name="" id="sel">
+        <option value="cap">Capitalize the first letter</option>
+        <option value="ins">Insert a word at a given position</option>
+        <option value="son">String or not</option>
+        <option value="split">Split into array of words</option>
+    </select><br>
+    <button onclick="func()">ANSWER</button><br>
+    <div id="res"></div>
+    <script>
+        function func()
+        {
+        let a = document.getElementById("inp").value
+        let b = document.getElementById("sel").value
+        let ans = document.getElementById("res")
+        switch (b) {
+            case "cap":
+                const arr = a.split(" ");
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+                }
+                const str1 = arr.join(" ");
+                res.innerHTML = str1
+                break;
+            case "ins":
+                const arr2 = a.split(" ")
+                var pos = parseInt(prompt("Enter the position"))
+                const string = prompt("Enter the string")
+                var final = ' '
+                pos--;
+                for (var i = 0; i < arr2.length; i++) {
+                    if (pos == i)
+                        final = final + " " + string + " ";
+                    final = final + arr2[i]
+                }
+                res.innerHTML = final;
+                break;
+            case 'son':
+                if (isNaN(a))
+                    ans.innerHTML = 'String'
+                else
+                    res.innerHTML = 'Number '
+
+                break;
+            case 'split':
+                const arr3 = a.split(' ')
+                var html = '';
+
+                for (var i = 0; i < arr3.length; i++) {
+                    html += '<div>' + arr3[i] + '</div>'
+                }
+
+                res.innerHTML = html
+
+                break;
+        }
+    }
+    </script>
+</body>
+
+</html>

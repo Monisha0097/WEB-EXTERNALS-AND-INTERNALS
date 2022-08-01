@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const set1 = new Set();
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+        set1.add(4);
+        document.write(set1.has(2))
+        document.write("<br>")
+        document.write(set1.has(5))
+        document.write("<br>")
+        for(let i of set1)
+        {
+            document.write(i)
+        }
+    </script>
+</body>
+</html>

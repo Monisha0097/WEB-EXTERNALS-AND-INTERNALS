@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="func()">ANSWER</button>
+    <div id="ans"></div>
+    <script>
+        const obj = {
+            name:"ronaldo",
+            class:"6",
+            usn:"85"
+
+        }
+        function func()
+        {
+            var arr = Object.keys(obj)
+            var final=""
+            var m = new Map()
+            for(let i=0;i<arr.length;i++)
+            {
+                final = final  + arr[i]+ " : " +obj[arr[i]] + "," + "<br>"
+                m.set(arr[i],obj[arr[i]])
+            }
+            for(var [key,val] of m.entries())
+            {
+                final = final + key + " : " + val + "<br>"
+            }
+            document.getElementById("ans").innerHTML = final
+        }
+    </script>
+</body>
+</html>
